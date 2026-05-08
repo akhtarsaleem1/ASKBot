@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}ASKBot Dashboard{% endblock %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Local background bot</p>
+    <h1>Promote one Play Store app every day.</h1>
+    <p class="lead">The bot rotates through your enabled apps, creates English social copy and a promo graphic, checks quality, and queues approved posts through Buffer.</p>
+  </div>
+  <div class="actions">
+    <form method="post" action="/actions/run-now">
+      <button type="submit">Run Daily Promotion Now</button>
+    </form>
+    <form method="post" action="/actions/refresh-apps">
+      <button type="submit" class="secondary">Refresh Play Store Apps</button>
+    </form>
+  </div>
+</section>
+
+<section class="metrics">
+  <div class="metric"><span>{{ stats.enabled_apps }}</span><label>Enabled apps</label></div>
+  <div class="metric"><span>{{ stats.apps }}</span><label>Total apps</label></div>
+  <div class="metric"><span>{{ stats.channels }}</span><label>Buffer channels</label></div>
+  <div class="metric"><span>{{ stats.queued }}</span><label>Queued posts</label></div>
+</section>
+
+<section class="grid two">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Schedule</h2>
+      <a href="/settings">Edit</a>
+    </div>
+    <dl class="details">
+      <dt>Developer URL</dt>
+      <dd>{{ cfg.developer_url }}</dd>
+      <dt>Morning post</dt>
+      <dd>{{ cfg.daily_post_time }} {{ cfg.timezone }}</dd>
+      <dt>Evening post</dt>
+      <dd>{{ cfg.daily_video_time }} {{ cfg.timezone }}</dd>
+      <dt>Auto publish</dt>
+      <dd>{{ "Enabled" if cfg.auto_publish_after_qc else "Disabled" }}</dd>
+      <dt>Image required</dt>
+      <dd>{{ "Yes" if cfg.require_image_asset else "No" }}</dd>
+    </dl>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Recent Runs</h2>
+      <a href="/logs">View all</a>
+    </div>
+    <table>
+      <thead><tr><th>Date</th><th>Status</th><th>Message</th></tr></thead>
+      <tbody>
+        {% for run in runs %}
+        <tr><td>{{ run.run_key }}</td><td><span class="pill {{ run.status }}">{{ run.status }}</span></td><td>{{ run.message }}</td></tr>
+        {% else %}
+        <tr><td colspan="3">No runs yet.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Latest Generated Posts</h2>
+    <a href="/posts">View posts</a>
+  </div>
+  <table>
+    <thead><tr><th>Date</th><th>Platform</th><th>Status</th><th>QC</th><th>Text</th></tr></thead>
+    <tbody>
+      {% for post in posts %}
+      <tr>
+        <td>{{ post.run_key }}</td>
+        <td>{{ post.platform }}</td>
+        <td><span class="pill {{ post.status }}">{{ post.status }}</span></td>
+        <td>{{ post.qc_score }}</td>
+        <td class="clip">{{ post.text }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="5">No posts generated yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% if logs %}
+<section class="notice-list">
+  {% for log in logs %}
+  <p class="notice {{ log.level }}">{{ log.message }}</p>
+  {% endfor %}
+</section>
+{% endif %}
+{% endblock %}
+

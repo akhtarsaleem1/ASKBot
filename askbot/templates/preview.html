@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Preview & Generate - ASKBot{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-head">
+    <h2>Generate Preview</h2>
+  </div>
+  
+  <form id="preview-form" method="post" action="/preview/generate" class="form-grid" style="margin-bottom: 2rem;">
+    <div class="field">
+      <label>Select App</label>
+      <select name="app_id" required>
+        <option value="">-- Choose an App --</option>
+        {% for app in apps %}
+        <option value="{{ app.id }}" {% if selected_app == app.id %}selected{% endif %}>{{ app.title }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="actions">
+      <button type="button" id="generate-btn" onclick="handlePreviewSubmit()">Generate AI Preview (Dry Run)</button>
+    </div>
+  </form>
+
+  {% if error_message %}
+  <div style="background: #450a0a; border: 1px solid #ef4444; color: #fca5a5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; white-space: pre-wrap; font-family: monospace; font-size: 0.85em;">
+    {{ error_message }}
+  </div>
+  {% endif %}
+
+  <div id="loading-overlay" style="display:none; text-align:center; padding: 2rem;">
+    <div class="spinner" style="width: 40px; height: 40px; border: 4px solid #334155; border-top-color: #38bdf8; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+    <p style="margin-top: 1rem; color: #94a3b8;">Generating feature-specific image and social posts... this takes about 10-15 seconds.</p>
+  </div>
+
+  {% if preview_data %}
+  <hr style="margin: 2rem 0;">
+  
+  <div class="panel-head">
+    <h2>Preview for {{ preview_data.app_title }}</h2>
+    <form method="post" action="/preview/publish" style="display:inline;">
+      <input type="hidden" name="app_id" value="{{ preview_data.app_id }}">
+      <input type="hidden" name="image_url" value="{{ preview_data.image_url }}">
+      <input type="hidden" name="hashtags" value="{{ preview_data.hashtags }}">
+      <input type="hidden" name="ai_prompt" value="{{ preview_data.ai_prompt }}">
+      <input type="hidden" name="image_model" value="{{ preview_data.image_model }}">
+      <input type="hidden" name="posts_json" value='{{ preview_data.posts | tojson }}'>
+      <button type="submit" class="primary">Approve & Publish to Buffer</button>
+    </form>
+  </div>
+
+  <div class="grid two" style="margin-top: 1.5rem;">
+    <div class="panel">
+      <h3>Generated Image</h3>
+      {% if preview_data.image_error %}
+      <div style="margin-top: 1rem; padding: 2rem; background: #450a0a; border: 1px solid #ef4444; color: #fca5a5; border-radius: 8px; text-align: center;">
+        {{ preview_data.image_error }}
+      </div>
+      {% elif preview_data.image_url %}
+      <div style="margin-top: 1rem;">
+        <img src="{{ preview_data.image_url }}" alt="Preview Image" style="width: 100%; border-radius: 8px; border: 1px solid #334155;">
+      </div>
+      <dl class="details" style="margin-top: 1.5rem;">
+        <dt>AI Image Model</dt>
+        <dd style="color: #38bdf8; font-weight: bold;">{{ preview_data.image_model|upper }}</dd>
+        <dt>AI Image Prompt</dt>
+        <dd style="font-size: 0.85em; color: #94a3b8;">{{ preview_data.ai_prompt }}</dd>
+      </dl>
+      {% endif %}
+    </div>
+
+    <div class="panel">
+      <h3>Hashtags</h3>
+      <p style="color: #38bdf8;">{{ preview_data.hashtags }}</p>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Generated Posts</h3>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        {% for platform, text in preview_data.posts.items() %}
+        <div style="background: #1e293b; padding: 1rem; border-radius: 8px; border: 1px solid #334155;">
+          <span class="pill" style="margin-bottom: 0.5rem; display: inline-block;">{{ platform|title }}</span>
+          <p style="white-space: pre-wrap; font-size: 0.9em; margin: 0; color: #e2e8f0;">{{ text }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</section>
+
+<script>
+  function handlePreviewSubmit() {
+    const form = document.getElementById('preview-form');
+    const btn = document.getElementById('generate-btn');
+    const overlay = document.getElementById('loading-overlay');
+    
+    if (form.checkValidity()) {
+      btn.disabled = true;
+      btn.innerText = 'Generating...';
+      overlay.style.display = 'block';
+      form.submit();
+    } else {
+      form.reportValidity();
+    }
+  }
+</script>
+<style>
+  @keyframes spin { 100% { transform: rotate(360deg); } }
+</style>
+{% endblock %}

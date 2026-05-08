@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}ASKBot{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <a class="brand" href="/">ASKBot</a>
+        <span class="subtitle">Daily Play Store promotion</span>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/preview">Preview</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/history">History</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/apps">Apps</a>
+        <a href="/channels">Buffer</a>
+        <a href="/settings">Settings</a>
+        <a href="/logs">Logs</a>
+      </nav>
+    </header>
+    <main class="page">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
+

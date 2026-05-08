@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Posts - ASKBot{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">Output</p>
+    <h1>Generated Posts</h1>
+    <p class="lead">Every generated post is stored locally with its QC score, image, Buffer ID, and errors.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <table>
+    <thead><tr><th>Date</th><th>App</th><th>Account</th><th>Platform</th><th>Status</th><th>QC</th><th>Buffer ID</th><th>Text</th></tr></thead>
+    <tbody>
+      {% for post in posts %}
+      <tr>
+        <td>{{ post.run_key }}</td>
+        <td>{{ app_map.get(post.app_id).title if app_map.get(post.app_id) else post.app_id }}</td>
+        <td>{{ post.buffer_account_label }}</td>
+        <td>{{ post.platform }}</td>
+        <td><span class="pill {{ post.status }}">{{ post.status }}</span></td>
+        <td>{{ post.qc_score }}</td>
+        <td class="mono">{{ post.buffer_post_id }}</td>
+        <td>
+          <p class="post-text">{{ post.text }}</p>
+          {% if post.error %}<p class="error-text">{{ post.error }}</p>{% endif %}
+          {% if post.image_path %}<p class="muted mono">{{ post.image_path }}</p>{% endif %}
+          {% if post.image_url %}<a href="{{ post.image_url }}" target="_blank" rel="noreferrer">Hosted image</a>{% endif %}
+          {% if post.video_path %}<p class="muted mono">{{ post.video_path }}</p>{% endif %}
+          {% if post.video_url %}<a href="{{ post.video_url }}" target="_blank" rel="noreferrer">Hosted video</a>{% endif %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8">No generated posts yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

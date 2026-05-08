@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Analytics - ASKBot{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">Performance Tracking</p>
+    <h1>Analytics Leaderboard</h1>
+    <p class="lead">Compare how different AI Layouts and Prompts drive engagement across your social channels.</p>
+  </div>
+  <div class="actions">
+    <form method="post" action="/actions/sync-analytics">
+      <button class="primary" type="submit">Sync Metrics Now</button>
+    </form>
+  </div>
+</section>
+
+<section class="grid one">
+  <div class="panel">
+    <h2>Top Performing Layouts</h2>
+    {% if layout_stats %}
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Layout Style</th>
+            <th>Posts Used</th>
+            <th>Avg Impressions</th>
+            <th>Avg Clicks</th>
+            <th>Est. CTR</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for stat in layout_stats %}
+          <tr>
+            <td><strong>{{ stat.layout_used }}</strong></td>
+            <td>{{ stat.post_count }}</td>
+            <td>{{ "{:,.0f}".format(stat.avg_impressions) }}</td>
+            <td>{{ "{:,.0f}".format(stat.avg_clicks) }}</td>
+            <td>
+              {% if stat.avg_impressions > 0 %}
+                {{ "{:.1f}%".format((stat.avg_clicks / stat.avg_impressions) * 100) }}
+              {% else %}
+                0%
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <div class="empty-state">
+        <p>No analytics data available yet. Run a promotion and sync metrics.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Settings - ASKBot{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">Configuration</p>
+    <h1>Bot Settings</h1>
+    <p class="lead">These settings are stored locally in SQLite. API keys stay in your `.env` file.</p>
+  </div>
+</section>
+
+<section class="grid two">
+  <div class="panel">
+    <h2>Daily Promotion</h2>
+    <form class="stack-form" method="post" action="/settings">
+      <label>Play developer URL<input name="developer_url" value="{{ cfg.developer_url }}" required></label>
+      <label>Apps to promote per day<input type="number" name="posts_per_day" value="{{ cfg.posts_per_day }}" min="1" max="10" required></label>
+      <label>Daily planner run time<input name="daily_post_time" value="{{ cfg.daily_post_time }}" pattern="[0-2][0-9]:[0-5][0-9]" required></label>
+      <label>Video post time<input name="daily_video_time" value="{{ cfg.daily_video_time }}" pattern="[0-2][0-9]:[0-5][0-9]" required></label>
+      <label>Timezone<input name="timezone" value="{{ cfg.timezone }}" required></label>
+      
+      <hr>
+      <h3>AI Engine Selection</h3>
+      <label>Image Generation Provider
+        <select name="creative_image_provider">
+          <option value="gemini" {% if cfg.creative_image_provider == 'gemini' %}selected{% endif %}>Gemini (Best Quality)</option>
+          <option value="huggingface" {% if cfg.creative_image_provider == 'huggingface' %}selected{% endif %}>Hugging Face (Flux)</option>
+        </select>
+      </label>
+      
+      <label>Gemini Image Model
+        <input name="gemini_image_model" value="{{ cfg.gemini_image_model }}" placeholder="gemini-2.0-flash">
+      </label>
+      
+      <label>Content Generation (Groq)
+        <input name="groq_model" value="{{ cfg.groq_model }}" placeholder="llama-3.3-70b-versatile">
+      </label>
+
+      <hr>
+      <label class="check"><input type="checkbox" name="auto_publish_after_qc" value="true" {% if cfg.auto_publish_after_qc %}checked{% endif %}> Auto publish after QC</label>
+      <label class="check"><input type="checkbox" name="require_image_asset" value="true" {% if cfg.require_image_asset %}checked{% endif %}> Require promo image URL before posting</label>
+      
+      <button type="submit">Save Settings & Sync Bot</button>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h2>API Key Status</h2>
+    <dl class="details">
+      <dt>Groq</dt><dd>{{ "Configured" if keys.groq else "Missing" }}</dd>
+      <dt>Buffer</dt><dd>{{ "Configured" if keys.buffer else "Missing" }}</dd>
+      <dt>Cloudinary</dt><dd>{{ "Configured" if keys.cloudinary else "Missing" }}</dd>
+    </dl>
+    <p class="muted">Edit `.env` and restart the bot after changing API keys.</p>
+    
+    <div style="margin-top: 2rem; padding: 1rem; background: #1e293b; border-radius: 8px; border-left: 4px solid #38bdf8;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #38bdf8;">Note on Persistence</h4>
+      <p style="font-size: 0.9rem; margin: 0;">Changes made here take effect <strong>immediately</strong> for the next scheduled run or manual "Run Now" action. No server restart required.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+hr { border: 0; border-top: 1px solid #334155; margin: 1.5rem 0; }
+h3 { font-size: 1rem; margin-bottom: 1rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+select { 
+  background: #0f172a; 
+  border: 1px solid #334155; 
+  color: white; 
+  padding: 0.5rem; 
+  border-radius: 4px; 
+  width: 100%;
+}
+</style>
+{% endblock %}

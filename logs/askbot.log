@@ -1,0 +1,628 @@
+2026-05-08 00:00:00 | INFO     | apscheduler.executors.default | Running job "start_scheduler.<locals>.image_job (trigger: cron[hour='0', minute='0'], next run at: 2026-05-09 00:00:00 PKT)" (scheduled at 2026-05-08 00:00:00+05:00)
+2026-05-08 00:00:00 | INFO     | askbot.promotion     | Starting promotion run - media_focus=image, dry_run=False
+2026-05-08 00:00:00 | INFO     | askbot.promotion     | Run key: 2026-05-08-image
+2026-05-08 00:00:14 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-05-08 00:00:15 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 00:00:15 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 00:00:15 | ERROR    | root                 | Hugging Face Image API error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fce13f-7a63b1951fa20eee554d4e45;88779f2b-23cd-4ea6-b7e1-e35348d5803e)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 00:00:15 | WARNING  | root                 | Hugging Face generation failed for ASK Prompt: AI Prompt Forge, falling back...
+2026-05-08 00:00:21 | INFO     | apscheduler.executors.default | Job "start_scheduler.<locals>.image_job (trigger: cron[hour='0', minute='0'], next run at: 2026-05-09 00:00:00 PKT)" executed successfully
+2026-05-08 00:50:06 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 00:50:06 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 00:50:06 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 00:50:06 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 00:50:06 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 00:50:06 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:21:13 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:21:13 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:21:13 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:21:13 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:21:13 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:21:13 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:23:55 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:23:55 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:23:55 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:23:55 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:23:55 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:23:55 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:23:55 | INFO     | apscheduler.scheduler | Scheduler has been shut down
+2026-05-08 10:24:50 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:24:50 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:24:50 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:24:50 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:24:50 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:24:50 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:25:52 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:25:52 | INFO     | root                 | Generated AI marketing plan for TubeGrow Grow YT Channel Video: Bloom Your Views
+2026-05-08 10:25:55 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:25:55 | INFO     | root                 | Using AI visual concept for TubeGrow Grow YT Channel Video: A surreal, night‑sky garden where luminescent vines sprout from a dark soil of static pixels. Each v...
+2026-05-08 10:25:56 | INFO     | root                 | HF key 1/2
+2026-05-08 10:25:56 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 10:25:57 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:25:57 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd73e4-156eb49e6c20c6b715018648;bfdcb207-68f4-45c5-999f-61432c2a9d07)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:25:57 | INFO     | root                 | HF key 2/2
+2026-05-08 10:26:05 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:26:06 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995864/67jdPc9Y-0EYcaltOoitZ.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:26:08 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:26:08 | INFO     | root                 | Layout: _layout_cinematic
+2026-05-08 10:26:37 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-08 10:26:37 | ERROR    | root                 | Failed to generate marketing plan: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-05-08 10:26:40 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:26:40 | INFO     | root                 | Using AI visual concept for TubeGrow Grow YT Channel Video: Abstract flowing shapes, clean minimal background...
+2026-05-08 10:26:40 | INFO     | root                 | HF key 1/2
+2026-05-08 10:26:40 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:26:40 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd7410-140e0b9736d7dccb4152082d;5a99d961-8c1c-4d91-9420-6641374e0508)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:26:40 | INFO     | root                 | HF key 2/2
+2026-05-08 10:26:53 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:26:55 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995869/D2VZlTpoxZs5O8OlMLzh4.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:26:55 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:26:55 | INFO     | root                 | Layout: _layout_glass_card
+2026-05-08 10:27:47 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:27:47 | INFO     | root                 | Generated AI marketing plan for TubeGrow Grow YT Channel Video: Unlock the Algorithm
+2026-05-08 10:27:51 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:27:51 | INFO     | root                 | Using AI visual concept for TubeGrow Grow YT Channel Video: A surreal, glowing garden at night where luminescent vines sprout from abstract, floating video thum...
+2026-05-08 10:27:51 | INFO     | root                 | HF key 1/2
+2026-05-08 10:27:52 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:27:52 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd7457-5a27bf3a580a3e920e4570ec;5f9a4c38-365c-49de-afbd-34d815c4aac2)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:27:52 | INFO     | root                 | HF key 2/2
+2026-05-08 10:27:57 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:27:58 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a99586f/__4lNHM0vynvbPFsOB0nN.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:27:59 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:27:59 | INFO     | root                 | Layout: _layout_bold_split
+2026-05-08 10:28:41 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:28:41 | INFO     | root                 | Generated AI marketing plan for ASK AI: Study Helper & Chatbot: Whispers of Knowledge
+2026-05-08 10:28:44 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:28:44 | INFO     | root                 | Using AI visual concept for ASK AI: Study Helper & Chatbot: A dreamy, abstract library where floating pages morph into flowing sound waves that ripple outward l...
+2026-05-08 10:28:44 | INFO     | root                 | HF key 1/2
+2026-05-08 10:28:44 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:28:44 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd748b-47ab479003cbdec61d5ff23b;75bda805-78b4-44a3-9755-662fe2d9c333)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:28:44 | INFO     | root                 | HF key 2/2
+2026-05-08 10:28:49 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:28:51 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995874/qSghLhjJ0_r7KFjtWWOw8.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:28:52 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:28:52 | INFO     | root                 | Layout: _layout_bold_split
+2026-05-08 10:29:05 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:29:05 | INFO     | root                 | Generated AI marketing plan for ASK AI: Study Helper & Chatbot: Speak Fluency, Hear Confidence
+2026-05-08 10:29:07 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:29:07 | INFO     | root                 | Using AI visual concept for ASK AI: Study Helper & Chatbot: A surreal, abstract illustration of a floating, translucent human head made of intertwining sound‑wa...
+2026-05-08 10:29:07 | INFO     | root                 | HF key 1/2
+2026-05-08 10:29:08 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:29:08 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd74a3-45d6976e2abaa88e1148c742;d2f23da8-c252-479a-a0a7-926edc95ce4d)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:29:08 | INFO     | root                 | HF key 2/2
+2026-05-08 10:29:11 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:29:13 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995877/MeCkp2B8DotfzAc_TIqKm.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:29:13 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:29:13 | INFO     | root                 | Layout: _layout_floating_minimal
+2026-05-08 10:29:44 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:29:44 | INFO     | root                 | Generated AI marketing plan for ASK AI: Study Helper & Chatbot: Unlock Your Brain’s Superpower
+2026-05-08 10:29:48 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:29:48 | INFO     | root                 | Using AI visual concept for ASK AI: Study Helper & Chatbot: A surreal library where floating, glowing books transform into swirling ribbons of light that morph ...
+2026-05-08 10:29:48 | INFO     | root                 | HF key 1/2
+2026-05-08 10:29:49 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:29:49 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd74cc-219368f271b9c9b254806108;e8414c5d-7771-459a-b792-a260bec28d2a)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:29:49 | INFO     | root                 | HF key 2/2
+2026-05-08 10:29:51 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:29:53 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a99587a/JftjJtSQ0jAhFGvzm9LIi.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:29:54 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:29:54 | INFO     | root                 | Layout: _layout_glass_card
+2026-05-08 10:30:30 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-08 10:30:31 | ERROR    | root                 | Failed to generate marketing plan: Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': 'max completion tokens reached before generating a valid document'}}
+2026-05-08 10:30:34 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:30:34 | INFO     | root                 | Using AI visual concept for ASK Prompt: AI Prompt Forge: Abstract flowing shapes, clean minimal background...
+2026-05-08 10:30:34 | INFO     | root                 | HF key 1/2
+2026-05-08 10:30:34 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:30:34 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd74fa-5fce3f6f791de84609872fb6;3aac0402-1181-492d-bbdf-865bc0b95e85)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:30:34 | INFO     | root                 | HF key 2/2
+2026-05-08 10:30:37 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:30:39 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a99587f/uxcsShyF05QUtyTo2KqGX.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:30:39 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:30:39 | INFO     | root                 | Layout: _layout_floating_minimal
+2026-05-08 10:31:51 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:31:51 | INFO     | root                 | Generated AI marketing plan for TubeGrow Grow YT Channel Video: Seeds of Success: Grow Your Views
+2026-05-08 10:31:53 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:31:53 | INFO     | root                 | Using AI visual concept for TubeGrow Grow YT Channel Video: A luminous seed sprouting in a dark digital void, its roots turning into glowing data streams and le...
+2026-05-08 10:31:53 | INFO     | root                 | HF key 1/2
+2026-05-08 10:31:54 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:31:54 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd7549-118ea21d49798d5470a89ac0;744e4dda-5595-452e-a08f-f795f68bbc12)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:31:54 | INFO     | root                 | HF key 2/2
+2026-05-08 10:31:55 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:31:57 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995887/iBklKTJidXL16wDRjQQWY.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:31:58 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:31:58 | INFO     | root                 | Layout: _layout_bold_split
+2026-05-08 10:32:30 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:32:30 | INFO     | root                 | Generated AI marketing plan for TubeGrow Grow YT Channel Video: Unlock the Viral Pulse
+2026-05-08 10:32:33 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:32:33 | INFO     | root                 | Using AI visual concept for TubeGrow Grow YT Channel Video: An abstract, kinetic sculpture of luminous data streams swirling upward like a neon aurora, forming ...
+2026-05-08 10:32:33 | INFO     | root                 | HF key 1/2
+2026-05-08 10:32:33 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:32:33 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd7571-78d1f109165c4bdd51282c4e;ac9c0668-5bc6-4489-8076-ac1d7c4017cd)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:32:33 | INFO     | root                 | HF key 2/2
+2026-05-08 10:32:37 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:32:39 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a99588b/UxuQhvgxWNPw6zmrxVIMY.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:32:40 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:32:40 | INFO     | root                 | Layout: _layout_cinematic
+2026-05-08 10:39:42 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:39:42 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:39:42 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:39:42 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:39:42 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:39:42 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:40:14 | INFO     | askbot.promotion     | Starting promotion run - media_focus=image, dry_run=False
+2026-05-08 10:40:14 | INFO     | askbot.promotion     | Run key: 2026-05-08-image
+2026-05-08 10:48:35 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:48:35 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:48:35 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:48:35 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:48:35 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:48:35 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:48:35 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 10:48:35 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:48:41 | INFO     | askbot.analytics     | Starting analytics sync...
+2026-05-08 10:48:42 | INFO     | askbot.analytics     | Analytics sync complete. Generated mock metrics for 31 posts.
+2026-05-08 10:50:49 | INFO     | askbot.analytics     | Starting analytics sync...
+2026-05-08 10:50:49 | INFO     | askbot.analytics     | Analytics sync complete. Generated mock metrics for 0 posts.
+2026-05-08 10:51:36 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:51:36 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:51:36 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:51:36 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:51:36 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:51:36 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:51:36 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 10:51:36 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:51:47 | INFO     | askbot.analytics     | Starting analytics sync...
+2026-05-08 10:51:47 | INFO     | askbot.analytics     | Analytics sync complete. Generated mock metrics for 0 posts.
+2026-05-08 10:52:42 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:52:42 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:52:42 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:52:42 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:52:42 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:52:42 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:52:42 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 10:52:42 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:53:28 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 10:53:28 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 10:53:28 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 10:53:28 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:53:28 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 10:53:28 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 10:53:28 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 10:53:28 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 10:55:52 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:55:52 | INFO     | root                 | Generated AI marketing plan for ASK Prompt: AI Prompt Forge: Ignite Your Ideas
+2026-05-08 10:55:55 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 10:55:55 | INFO     | root                 | Using AI visual concept for ASK Prompt: AI Prompt Forge: A stylized, abstract forge where molten ideas flow like glowing lava into sleek, metallic shapes; sp...
+2026-05-08 10:55:55 | INFO     | root                 | HF key 1/2
+2026-05-08 10:55:56 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 10:55:56 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 10:55:56 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fd7aec-6228ed2c03425f5820185cd1;879d7e17-a930-4a65-994c-e9e5aa708afd)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 10:55:56 | INFO     | root                 | HF key 2/2
+2026-05-08 10:55:59 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 10:56:02 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995917/S8Cd1yjiS0JhiV801wmJz.jpg "HTTP/1.1 200 OK"
+2026-05-08 10:56:03 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 10:56:03 | INFO     | root                 | Layout: _layout_bold_split
+2026-05-08 14:25:16 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 14:25:16 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 14:25:16 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 14:25:16 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 14:25:16 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 14:25:16 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 14:25:16 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 14:25:16 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 15:06:41 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 15:06:41 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 15:06:41 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 15:06:41 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:06:41 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:06:41 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 15:06:41 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 15:06:41 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 15:06:59 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 15:06:59 | INFO     | root                 | Image prompt for ASK Prompt: AI Prompt Forge: Professional promotional image for the mobile app 'ASK Prompt: AI Prompt Forge'. Feature focus: Expert AI prompt templat...
+2026-05-08 15:06:59 | INFO     | root                 | HF key 1/2
+2026-05-08 15:07:00 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 15:07:00 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 15:07:00 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdb5c5-2052ea416ad49a6b18777159;a190cefb-6b38-44bb-a4a0-6ce4bf5d5dda)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 15:07:00 | INFO     | root                 | HF key 2/2
+2026-05-08 15:07:02 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 15:07:03 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a995efa/PSyyynX1eLPaZO2ypmEGG.jpg "HTTP/1.1 200 OK"
+2026-05-08 15:07:04 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 15:07:04 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508150659-com.ask.prompt-6d941f2b67d0.png
+2026-05-08 15:50:47 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 15:50:47 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 15:50:47 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 15:50:47 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:50:47 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:50:47 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 15:50:47 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 15:50:47 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 15:51:00 | INFO     | apscheduler.scheduler | Scheduler has been shut down
+2026-05-08 15:51:07 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 15:51:07 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 15:51:07 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 15:51:07 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:51:07 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:51:07 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 15:51:07 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 15:51:07 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 15:51:43 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 15:51:43 | INFO     | root                 | Image prompt for ASK Prompt: AI Prompt Forge: Professional promotional image for the mobile app 'ASK Prompt: AI Prompt Forge'. Feature focus: Expert AI prompt templat...
+2026-05-08 15:51:43 | INFO     | root                 | HF key 1/2
+2026-05-08 15:51:43 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 15:51:44 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 15:51:44 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc040-63fb65457174841d7d5f71f6;b0cf4bd0-4a83-4b8e-97be-bb0e8155d918)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 15:51:44 | INFO     | root                 | HF key 2/2
+2026-05-08 15:51:45 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 15:51:46 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a996006/0IOl5rZebdM36P6zmj6KU.jpg "HTTP/1.1 200 OK"
+2026-05-08 15:51:47 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 15:51:48 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508155143-com.ask.prompt-921158bf82c7.png
+2026-05-08 15:58:48 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 15:58:48 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 15:58:48 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 15:58:48 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:58:48 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 15:58:48 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 15:58:48 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 15:58:48 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 15:59:23 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 15:59:23 | INFO     | root                 | Image prompt for Calmi: AI Friend & Anxiety Aid: Professional promotional image for the mobile app 'Calmi: AI Friend & Anxiety Aid'. Feature focus: Track your mood, reli...
+2026-05-08 15:59:23 | INFO     | root                 | HF key 1/2
+2026-05-08 15:59:24 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 15:59:24 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 15:59:24 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc20c-4cd1af5f14757ea324850d35;10a4531d-927a-417c-8e1c-b9a13742a196)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 15:59:24 | INFO     | root                 | HF key 2/2
+2026-05-08 15:59:27 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 15:59:29 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a996034/mDB7VDT4FAoN21F0QSxNa.jpg "HTTP/1.1 200 OK"
+2026-05-08 15:59:29 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 15:59:31 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508155923-com.ask.calmi-376137f3f69b.png
+2026-05-08 15:59:31 | ERROR    | root                 | Preview generation failed for app 2:
+Traceback (most recent call last):
+  File "D:\Software\ASKBot\askbot\dashboard.py", line 331, in generate_preview
+    filename = Path(image_path).name
+               ^^^^
+NameError: name 'Path' is not defined
+
+2026-05-08 16:00:14 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:00:14 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:00:14 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:00:14 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:00:14 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:00:14 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:00:14 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:00:14 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:00:34 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 16:00:34 | INFO     | root                 | Image prompt for Calmi: AI Friend & Anxiety Aid: Professional promotional image for the mobile app 'Calmi: AI Friend & Anxiety Aid'. Feature focus: Track your mood, reli...
+2026-05-08 16:00:34 | INFO     | root                 | HF key 1/2
+2026-05-08 16:00:34 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 16:00:35 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 16:00:35 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc253-6eff50cf642b150b2be2f858;ba484742-0fd5-4948-be41-1143e6d37f4b)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 16:00:35 | INFO     | root                 | HF key 2/2
+2026-05-08 16:00:35 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 16:00:35 | ERROR    | root                 | HF key 2 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc253-32081bb5705a694b2ee427ee;edd3d253-2b8a-427e-992f-8e21bb670de0)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 16:00:36 | ERROR    | root                 | Gemini error: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=AIzaSyAtvlUN4xNNCD0JCAkVFpY5JJMzedjxptU
+2026-05-08 16:00:36 | ERROR    | root                 | Image generation failed for Calmi: AI Friend & Anxiety Aid
+2026-05-08 16:00:36 | ERROR    | root                 | Preview generation failed for app 2:
+Traceback (most recent call last):
+  File "D:\Software\ASKBot\askbot\dashboard.py", line 330, in generate_preview
+    image_path, prompt_used = image_gen.create(app, content, run_key, selected_feature=content.selected_feature)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Software\ASKBot\askbot\services\image_generator.py", line 44, in create
+    raise RuntimeError(f"AI image generation failed for {app.title}. Check logs for details.")
+RuntimeError: AI image generation failed for Calmi: AI Friend & Anxiety Aid. Check logs for details.
+
+2026-05-08 16:02:34 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:02:34 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:02:34 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:02:34 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:02:34 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:02:34 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:02:34 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:02:34 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:02:52 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 16:02:52 | INFO     | root                 | Image prompt for TubeGrow Grow YT Channel Video: Professional promotional image for the mobile app 'TubeGrow Grow YT Channel Video'. Feature focus: TubeGrow your YT chan...
+2026-05-08 16:02:52 | INFO     | root                 | HF key 1/2
+2026-05-08 16:02:53 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 16:02:53 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 16:02:53 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc2dd-46127a643c143ef462b0f001;c2df5d6d-0848-46f3-9f6b-d3dfe2f00fd5)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 16:02:53 | INFO     | root                 | HF key 2/2
+2026-05-08 16:02:56 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 16:02:57 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a996049/9zR5nlwmUAfjfX8brnAEC.jpg "HTTP/1.1 200 OK"
+2026-05-08 16:02:58 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 16:03:01 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508160252-com.ask.tubetool-e20f1aade1b3.png
+2026-05-08 16:03:56 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:03:56 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:03:56 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:03:56 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:03:56 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:03:56 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:03:56 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:03:56 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:03:56 | INFO     | apscheduler.scheduler | Scheduler has been shut down
+2026-05-08 16:04:20 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:04:20 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:04:20 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:04:20 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:04:20 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:04:20 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:04:20 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:04:20 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:05:12 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:05:12 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:05:12 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:05:12 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:05:12 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:05:12 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:05:12 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:05:12 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:12:02 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:12:02 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:12:02 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:12:02 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:12:02 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:12:02 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:12:02 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:12:02 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:12:02 | INFO     | apscheduler.scheduler | Scheduler has been shut down
+2026-05-08 16:12:40 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:12:40 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:12:40 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:12:40 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:12:40 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:12:40 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:12:40 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:12:40 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:12:53 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 16:12:53 | INFO     | root                 | Image prompt for ASK Prompt: AI Prompt Forge: Professional promotional image for the mobile app 'ASK Prompt: AI Prompt Forge'. Feature focus: Expert AI prompt templat...
+2026-05-08 16:12:53 | INFO     | root                 | HF key 1/2
+2026-05-08 16:12:53 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 16:12:54 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 16:12:54 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc536-67852921187a5e833d13411b;17aaa24e-3a28-4674-83a4-4bade0dec1b8)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 16:12:54 | INFO     | root                 | HF key 2/2
+2026-05-08 16:12:55 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 16:12:56 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a996085/FFzoCq1T5MPg_kQyrA8KE.jpg "HTTP/1.1 200 OK"
+2026-05-08 16:12:57 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 16:12:59 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508161253-com.ask.prompt-5124bb9fbe38.png
+2026-05-08 16:19:09 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 16:19:09 | INFO     | root                 | Image prompt for ASK AI: Study Helper & Chatbot: Professional promotional image for the mobile app 'ASK AI: Study Helper & Chatbot'. Feature focus: Instant homework answ...
+2026-05-08 16:19:09 | INFO     | root                 | HF key 1/2
+2026-05-08 16:19:09 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 16:19:09 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc6ad-2444a2446d4579b72070c692;ac657ea3-9141-4238-b119-d7e01fb5aa89)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 16:19:09 | INFO     | root                 | HF key 2/2
+2026-05-08 16:19:11 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 16:19:13 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a9960ab/F3f9dbQzwyOwjl8t87afy.jpg "HTTP/1.1 200 OK"
+2026-05-08 16:19:13 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 16:19:15 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508161909-com.ask.askaiai-da796cbfe053.png
+2026-05-08 16:22:25 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:22:25 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:22:25 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:22:25 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:22:25 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:22:25 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:22:25 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:22:25 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:24:04 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:24:04 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:24:04 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:24:04 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:24:04 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:24:04 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:24:04 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:24:04 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:24:32 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 16:24:32 | INFO     | root                 | Image prompt for Calmi: AI Friend & Anxiety Aid: Professional promotional image for the mobile app 'Calmi: AI Friend & Anxiety Aid'. Feature focus: Track your mood, reli...
+2026-05-08 16:24:32 | INFO     | root                 | HF key 1/2
+2026-05-08 16:24:33 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 16:24:33 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 16:24:33 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdc7f1-7c3035167e93c4d86990335d;adea909d-8c64-413b-9611-7d9559679715)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 16:24:33 | INFO     | root                 | HF key 2/2
+2026-05-08 16:24:35 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 16:24:36 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a9960cb/8cJozIe4QvaKKszJWZRr-.jpg "HTTP/1.1 200 OK"
+2026-05-08 16:24:36 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 16:24:38 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508162432-com.ask.calmi-0f49e091aac0.png
+2026-05-08 16:33:08 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:33:08 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:33:08 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:33:08 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:33:08 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:33:08 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:33:08 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:33:08 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:38:56 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:38:56 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:38:56 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:38:56 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:38:56 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:38:56 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:38:56 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:38:56 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:39:15 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:39:15 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:39:15 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:39:15 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:39:15 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:39:15 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:39:15 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:39:15 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:39:15 | INFO     | apscheduler.scheduler | Scheduler has been shut down
+2026-05-08 16:40:43 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:40:43 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:40:43 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:40:43 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:40:43 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:40:43 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:40:43 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:40:43 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:43:10 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:43:10 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:43:10 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:43:10 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:43:10 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:43:10 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:43:10 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:43:10 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 16:57:38 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 16:57:38 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 16:57:38 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 16:57:38 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:57:38 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 16:57:38 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.image_job" to job store "default"
+2026-05-08 16:57:38 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 16:57:38 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:02:47 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 17:02:47 | INFO     | root                 | Image prompt for Invoice Simple-Billing Manager: Professional promotional image for the mobile app 'Invoice Simple-Billing Manager'. Feature focus: Invoice Simple & Invo...
+2026-05-08 17:02:47 | INFO     | root                 | HF key 1/2
+2026-05-08 17:02:47 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/black-forest-labs/FLUX.1-schnell?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-05-08 17:02:48 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 402 Payment Required"
+2026-05-08 17:02:48 | ERROR    | root                 | HF key 1 error: Client error '402 Payment Required' for url 'https://router.huggingface.co/fal-ai/fal-ai/flux/schnell' (Request ID: Root=1-69fdd0e8-2d21a975730bee41083af134;9f3e9a6d-231e-492d-be1b-d021c9406030)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
+2026-05-08 17:02:48 | INFO     | root                 | HF key 2/2
+2026-05-08 17:02:49 | INFO     | httpx                | HTTP Request: POST https://router.huggingface.co/fal-ai/fal-ai/flux/schnell "HTTP/1.1 200 OK"
+2026-05-08 17:02:50 | INFO     | httpx                | HTTP Request: GET https://v3b.fal.media/files/b/0a9961b0/HCp8An1mZ-aRc7Terdvjp.jpg "HTTP/1.1 200 OK"
+2026-05-08 17:02:51 | INFO     | root                 | Hugging Face image generated successfully
+2026-05-08 17:02:53 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508170247-com.ask.invoice-ceeb157b0506.png
+2026-05-08 17:06:13 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:06:13 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:06:13 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:06:13 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:06:13 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:06:13 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:06:13 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:06:13 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:09:24 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:09:24 | INFO     | root                 | Scheduler refreshed: Daily promotion set to 00:00 (Asia/Karachi)
+2026-05-08 17:17:34 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:17:34 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:17:34 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:17:34 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:17:34 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:17:34 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:17:34 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:17:34 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:18:31 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:18:31 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:18:31 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:18:31 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:18:31 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:18:31 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:18:31 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:18:31 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:20:06 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:20:06 | INFO     | root                 | Scheduler refreshed: Daily promotion set to 00:00 (Timezone: Asia/Karachi)
+2026-05-08 17:20:06 | INFO     | root                 | Next scheduled run for daily promotion: 2026-05-09 00:00:00+05:00
+2026-05-08 17:20:47 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:20:47 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:20:47 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:20:47 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:20:47 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:20:47 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:20:47 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:20:47 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:22:47 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:22:47 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:22:47 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:22:47 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:22:47 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:22:47 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:22:47 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:22:47 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:30:21 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:30:21 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:30:21 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:30:21 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:30:21 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:30:21 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:30:21 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:30:21 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:31:32 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:31:32 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:31:32 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:31:32 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:31:32 | INFO     | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-08 17:31:32 | INFO     | apscheduler.scheduler | Added job "image_job_wrapper" to job store "default"
+2026-05-08 17:31:32 | INFO     | apscheduler.scheduler | Added job "start_scheduler.<locals>.analytics_job" to job store "default"
+2026-05-08 17:31:32 | INFO     | apscheduler.scheduler | Scheduler started
+2026-05-08 17:31:54 | INFO     | httpx                | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-08 17:31:54 | INFO     | root                 | Image prompt for ASK Prompt: AI Prompt Forge: Professional promotional image for the mobile app 'ASK Prompt: AI Prompt Forge'. Feature focus: Expert AI prompt templat...
+2026-05-08 17:31:54 | INFO     | root                 | HF key 1/2
+2026-05-08 17:31:54 | INFO     | httpx                | HTTP Request: GET https://huggingface.co/api/models/gemini-2.0-flash?expand=inferenceProviderMapping "HTTP/1.1 401 Unauthorized"
+2026-05-08 17:31:54 | ERROR    | root                 | HF key 1 error: 401 Client Error. (Request ID: Root=1-69fdd7ba-1906140a6d7e100a3023f7d6;ab65299e-e611-4f3e-b8e4-50ef4e4e5d6a)
+
+Repository Not Found for url: https://huggingface.co/api/models/gemini-2.0-flash?expand=inferenceProviderMapping.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated and your token has the required permissions.
+For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+Invalid username or password.
+2026-05-08 17:31:55 | ERROR    | root                 | Gemini error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAtvlUN4xNNCD0JCAkVFpY5JJMzedjxptU
+2026-05-08 17:31:55 | INFO     | root                 | Pollinations image request: https://image.pollinations.ai/prompt/Professional%20promotional%20image%20for%20the%20mobile%20app%20%27ASK%20Prompt%3A%...
+2026-05-08 17:31:56 | INFO     | root                 | Pollinations image generated successfully
+2026-05-08 17:31:58 | INFO     | root                 | Saved image: D:\Software\ASKBot\data\assets\preview-20260508173154-com.ask.prompt-7e226c49f7b7.png
+2026-05-08 17:33:31 | ERROR    | askbot.promotion     | Manual publish failed for ask-apps-ab059b405: Failed to create post: Failed to fetch image dimensions: Not Found
+2026-05-08 17:33:40 | ERROR    | askbot.promotion     | Manual publish failed for askapps32: Failed to create post: Failed to fetch image dimensions: Not Found
+2026-05-08 17:33:49 | ERROR    | askbot.promotion     | Manual publish failed for askapps32: Failed to create post: Failed to fetch image dimensions: Not Found
+2026-05-08 17:35:16 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:35:16 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:35:16 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log
+2026-05-08 17:35:35 | INFO     | root                 | ASKBot logging initialized
+2026-05-08 17:35:35 | INFO     | root                 | Log directory: D:\Software\ASKBot\logs
+2026-05-08 17:35:35 | INFO     | root                 | Log files: askbot.log, promotion.log, errors.log

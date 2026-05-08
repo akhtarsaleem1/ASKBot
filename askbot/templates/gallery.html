@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Image Gallery - ASKBot{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-head">
+    <h2>Generated Image Gallery</h2>
+  </div>
+  
+  {% if not posts %}
+  <p>No images have been generated yet.</p>
+  {% else %}
+  <div class="gallery-grid">
+    {% for post in posts %}
+    {% set app = app_map.get(post.app_id) %}
+    <div class="gallery-card">
+      <div class="image-wrapper">
+        {% if post.image_url.startswith('http') %}
+        <img src="{{ post.image_url }}" alt="{{ app.title if app else 'Post' }}" loading="lazy">
+        {% else %}
+        <!-- Serve local images using the filename if Cloudinary is not configured -->
+        {% set parts = post.image_path.split('\\') %}
+        {% set filename = parts[-1].split('/')[-1] %}
+        <img src="/api/images/{{ filename }}" alt="{{ app.title if app else 'Post' }}" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="gallery-info">
+        <h3>{{ app.title if app else 'Unknown App (Deleted)' }}</h3>
+        <span class="date">{{ post.created_at.strftime('%b %d, %Y') }}</span>
+        {% if post.layout_used %}
+        <span class="pill outline">{{ post.layout_used.replace('_layout_', '').replace('_', ' ').title() }}</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.gallery-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: #475569;
+}
+.image-wrapper {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #020617;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.gallery-card:hover .image-wrapper img {
+  transform: scale(1.05);
+}
+.gallery-info {
+  padding: 1rem;
+}
+.gallery-info h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #f8fafc;
+}
+.gallery-info .date {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+.pill.outline {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Buffer Channels - ASKBot{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">Publishing</p>
+    <h1>Buffer Channels</h1>
+    <p class="lead">Sync your connected Buffer channels and choose where approved daily posts should be queued.</p>
+  </div>
+  <form method="post" action="/actions/sync-buffer">
+    <button type="submit">Sync Buffer</button>
+  </form>
+</section>
+
+{% if not buffer_configured %}
+<p class="notice warning">No Buffer API keys are configured in .env, so channel sync and publishing are blocked.</p>
+{% endif %}
+
+<section class="panel">
+  <table>
+    <thead><tr><th>Name</th><th>Account</th><th>Service</th><th>Channel ID</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+      {% for channel in channels %}
+      <tr>
+        <td>{{ channel.name }}</td>
+        <td>{{ channel.buffer_account_label }}</td>
+        <td>{{ channel.service }}</td>
+        <td class="mono">{{ channel.buffer_channel_id }}</td>
+        <td>{{ "Enabled" if channel.enabled else "Disabled" }}</td>
+        <td>
+          <form method="post" action="/channels/{{ channel.id }}/toggle">
+            <button class="secondary" type="submit">{{ "Disable" if channel.enabled else "Enable" }}</button>
+          </form>
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="6">No Buffer channels synced yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% for log in logs %}
+<p class="notice {{ log.level }}">{{ log.message }}</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block title %}Post History - ASKBot{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-head">
+    <h2>Post History</h2>
+    <span>Showing last 100 generated posts</span>
+  </div>
+  
+  {% if not posts %}
+  <p>No posts generated yet.</p>
+  {% else %}
+  <div class="history-feed">
+    {% for post in posts %}
+    {% set app = app_map.get(post.app_id) %}
+    <div class="history-card">
+      <div class="history-header">
+        <div class="app-info">
+          <h3>{{ app.title if app else 'Unknown App (Deleted)' }}</h3>
+          <span class="platform-badge {{ post.platform }}">{{ post.platform|title }}</span>
+          <span class="pill {{ post.status }}">{{ post.status }}</span>
+        </div>
+        <div class="meta-info">
+          <span class="date">{{ post.created_at.strftime('%Y-%m-%d %H:%M') }}</span>
+          {% if post.buffer_post_id %}
+          <span class="buffer-link" title="Buffer ID: {{ post.buffer_post_id }}">🔗 Buffer</span>
+          {% endif %}
+          {% set metric = metrics_map.get(post.id) %}
+          {% if metric %}
+          <span class="metrics-badge" title="Engagement: {{ '{:.1f}%'.format(metric.engagement_rate * 100) }}">
+            👁️ {{ metric.impressions }} | 👆 {{ metric.clicks }}
+          </span>
+          {% endif %}
+        </div>
+      </div>
+      
+      <div class="history-body">
+        {% if post.image_path %}
+        <div class="history-media">
+          {% if post.image_url.startswith('http') %}
+          <img src="{{ post.image_url }}" alt="Post image" loading="lazy">
+          {% else %}
+          {% set parts = post.image_path.split('\\') %}
+          {% set filename = parts[-1].split('/')[-1] %}
+          <img src="/api/images/{{ filename }}" alt="Post image" loading="lazy">
+          {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="history-content">
+          <p class="post-text">{{ post.text }}</p>
+          {% if post.hashtags %}
+          <p class="hashtags">{{ post.hashtags }}</p>
+          {% endif %}
+          
+          {% if post.error and post.status != 'draft' %}
+          <div class="error-box">
+            <strong>Log:</strong> {{ post.error }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<style>
+.history-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.history-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #1e293b;
+}
+.app-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.app-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.platform-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.platform-badge.twitter { background: #1da1f2; color: #fff; }
+.platform-badge.linkedin { background: #0077b5; color: #fff; }
+.platform-badge.facebook { background: #1877f2; color: #fff; }
+.platform-badge.instagram { background: #e1306c; color: #fff; }
+.platform-badge.generic { background: #475569; color: #fff; }
+
+.meta-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+.metrics-badge {
+  background: #1e293b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.history-body {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.history-media {
+  flex: 0 0 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #020617;
+  border: 1px solid #1e293b;
+}
+.history-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.history-content {
+  flex: 1;
+}
+.post-text {
+  white-space: pre-wrap;
+  margin: 0 0 1rem 0;
+  color: #f8fafc;
+  line-height: 1.5;
+}
+.hashtags {
+  color: #38bdf8;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+.error-box {
+  background: #450a0a;
+  border-left: 4px solid #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #fca5a5;
+  margin-top: 1rem;
+}
+</style>
+{% endblock %}

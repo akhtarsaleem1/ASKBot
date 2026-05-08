@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Apps - ASKBot{% endblock %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <p class="eyebrow">Catalog</p>
+    <h1>Play Store Apps</h1>
+    <p class="lead">Refresh from your developer page, then enable the apps you want in the daily rotation.</p>
+  </div>
+  <form method="post" action="/actions/refresh-apps">
+    <button type="submit">Refresh Catalog</button>
+  </form>
+</section>
+
+<section class="panel">
+  <div class="panel-head"><h2>Developer Source</h2><a href="/settings">Change</a></div>
+  <p class="muted">{{ cfg.developer_url }}</p>
+</section>
+
+<section class="panel">
+  <h2>Add or Update Manually</h2>
+  <form class="form-grid" method="post" action="/apps/manual">
+    <label>App title<input name="title" required></label>
+    <label>Play Store app link<input name="app_link" placeholder="https://play.google.com/store/apps/details?id=..." required></label>
+    <label class="wide">Short description<textarea name="short_description" rows="3"></textarea></label>
+    <button type="submit">Save App</button>
+  </form>
+</section>
+
+<section class="panel">
+  <div class="panel-head"><h2>Apps</h2><span>{{ apps|length }} records</span></div>
+  <div class="app-list">
+    {% for app in apps %}
+    <article class="app-row">
+      <div class="app-main">
+        {% if app.icon_url %}<img src="{{ app.icon_url }}" alt="" class="app-icon">{% endif %}
+        <div>
+          <h3>{{ app.title }}</h3>
+          <p>{{ app.package_name }}</p>
+          <a href="{{ app.app_link }}" target="_blank" rel="noreferrer">{{ app.app_link }}</a>
+        </div>
+      </div>
+      <form class="inline" method="post" action="/apps/{{ app.id }}/toggle">
+        <button class="{{ 'secondary' if app.enabled else '' }}" type="submit">{{ "Disable" if app.enabled else "Enable" }}</button>
+      </form>
+      <form class="edit-form" method="post" action="/apps/{{ app.id }}/update">
+        <label>Title<input name="title" value="{{ app.title }}"></label>
+        <label>Link<input name="app_link" value="{{ app.app_link }}"></label>
+        <label class="wide">Description<textarea name="short_description" rows="2">{{ app.short_description }}</textarea></label>
+        <button type="submit" class="secondary">Update</button>
+      </form>
+    </article>
+    {% else %}
+    <p class="empty">No apps yet. Refresh the catalog or add an app manually.</p>
+    {% endfor %}
+  </div>
+</section>
+
+{% for log in logs %}
+<p class="notice {{ log.level }}">{{ log.message }}</p>
+{% endfor %}
+{% endblock %}
+

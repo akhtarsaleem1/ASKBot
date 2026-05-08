@@ -1,0 +1,7 @@
+2026-05-08 00:00:00 | INFO     | Starting promotion run - media_focus=image, dry_run=False
+2026-05-08 00:00:00 | INFO     | Run key: 2026-05-08-image
+2026-05-08 10:40:14 | INFO     | Starting promotion run - media_focus=image, dry_run=False
+2026-05-08 10:40:14 | INFO     | Run key: 2026-05-08-image
+2026-05-08 17:33:31 | ERROR    | Manual publish failed for ask-apps-ab059b405: Failed to create post: Failed to fetch image dimensions: Not Found
+2026-05-08 17:33:40 | ERROR    | Manual publish failed for askapps32: Failed to create post: Failed to fetch image dimensions: Not Found
+2026-05-08 17:33:49 | ERROR    | Manual publish failed for askapps32: Failed to create post: Failed to fetch image dimensions: Not Found
